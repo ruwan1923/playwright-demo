@@ -15,7 +15,7 @@ test.describe('Basic Operations', () => {
     await expect(page.getByRole('textbox', { name: 'Search' })).toBeVisible();
 
     // Verify footer About Us link
-    await expect(page.getByRole('link', { name: 'About Us' })).toBeVisible();
+    await expect(page.locator('footer').getByRole('link', { name: 'About Us' }).first()).toBeVisible();
 
     // Verify payment icon present
     await expect(page.getByRole('img', { name: 'We accept Amex' })).toBeVisible();
